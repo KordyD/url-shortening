@@ -1,0 +1,15 @@
+.link {
+  text-decoration: none;
+  color: hsl(257, 7%, 63%);
+
+  &:hover {
+    color: hsl(260, 8%, 14%);
+  }
+}
+
+.oldLink {
+  color: hsl(260, 8%, 14%);
+}
+.newLink {
+  color: hsl(180, 66%, 49%);
+}

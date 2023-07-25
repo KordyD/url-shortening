@@ -1,0 +1,14 @@
+.linkCard {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 35px;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+
+  div {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+}
