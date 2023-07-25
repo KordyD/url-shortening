@@ -10,3 +10,10 @@
   flex-direction: column;
   gap: 25px;
 }
+
+.error {
+  color: hsl(0, 87%, 67%);
+  font-style: italic;
+  font-size: 0.7rem;
+  margin-top: 5px;
+}
