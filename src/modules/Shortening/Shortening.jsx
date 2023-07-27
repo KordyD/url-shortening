@@ -6,6 +6,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { createShortLink } from '../../store/linkSlice';
 
 const Shortening = () => {
+  const linkCards = useSelector((state) => state.linkCards.linkCards);
+
+  const dispatch = useDispatch();
+
   const [oldLink, setOldLink] = useState('');
 
   // const [error, setError] = useState('');
@@ -24,10 +28,6 @@ const Shortening = () => {
   //   setError(err.message);
   // }
 
-  const links = useSelector((state) => state.links.links);
-
-  const dispatch = useDispatch();
-
   const createNewLink = () => {
     dispatch(createShortLink(oldLink));
   };
@@ -37,17 +37,24 @@ const Shortening = () => {
   };
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.input}>
+    <div>
+      <div className={styles.inputFormBackground}>
         <InputForm
           handleSubmit={() => createNewLink()}
           handleChange={handleChange}
         />
-        {/* {error && <p className={styles.error}>{error}</p>} */}
       </div>
-      {links.map((card) => (
-        <LinkCard oldLink='' newLink={card} />
-      ))}
+      <div className={styles.linkCardsBackground}>
+        <div className={`${styles.linkCardsWrapper} container`}>
+          {linkCards.map((card) => (
+            <LinkCard
+              oldLink={card.oldLink}
+              newLink={card.newLink}
+              key={card.id}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

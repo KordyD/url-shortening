@@ -1,14 +1,18 @@
-.input {
-  background-color: hsl(257, 27%, 26%);
-  background-image: url('/images/bg-shorten-desktop.svg');
-  padding: 35px;
-  border-radius: 10px;
-}
+@use '/src/lib';
 
-.wrapper {
+.linkCardsWrapper {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  // & > *:not(:last-child) {
+  //   margin-bottom: 25px;
+  // }
+}
+
+.linkCardsBackground {
+  background-color: lib.$gray;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .error {
@@ -16,4 +20,8 @@
   font-style: italic;
   font-size: 0.7rem;
   margin-top: 5px;
+}
+
+.inputFormBackground {
+  background-image: linear-gradient(transparent 50%, lib.$gray 50%);
 }

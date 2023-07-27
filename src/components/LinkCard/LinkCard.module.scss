@@ -5,8 +5,9 @@
   align-items: center;
   background-color: white;
   border-radius: 10px;
+  font-size: 0.8rem;
 
-  div {
+  & > div {
     display: flex;
     gap: 15px;
     align-items: center;

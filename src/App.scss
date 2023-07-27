@@ -77,17 +77,26 @@ input {
       color: lib.$very-dark-violet;
     }
   }
-}
 
-// .oldLink {
-//   color: hsl(260, 8%, 14%);
-// }
-// .newLink {
-//   color: hsl(180, 66%, 49%);
-// }
+  &.linkCard__newLink {
+    color: lib.$cyan;
 
-.shortenedLinks {
-  background-color: hsl(0, 0%, 75%);
-  margin-top: 150px;
-  position: relative;
+    &:hover {
+      color: lib.$dark-violet;
+    }
+    &:active {
+      color: lib.$very-dark-violet;
+    }
+  }
+
+  &.linkCard__oldLink {
+    color: lib.$dark-violet;
+    &:hover {
+      color: lib.$cyan;
+    }
+
+    &:active {
+      color: lighten(lib.$cyan, $amount: 30);
+    }
+  }
 }

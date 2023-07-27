@@ -10,9 +10,7 @@ function App() {
 
       <Hero />
 
-      <div className='shortenedLinks'>
-        <Shortening />
-      </div>
+      <Shortening />
 
       <div>
         <h1>Advanced Statistics</h1>

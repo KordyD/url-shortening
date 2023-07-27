@@ -14,7 +14,7 @@ import storage from 'redux-persist/lib/storage';
 import linkReducer from './linkSlice';
 
 const rootReducer = combineReducers({
-  links: linkReducer,
+  linkCards: linkReducer,
 });
 
 const persistConfig = {

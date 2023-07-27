@@ -1,12 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { API_SHORTEN_URL } from '../helpers/API';
 
 export const createShortLink = createAsyncThunk(
   'links/createShortLink',
   async function (url) {
-    const response = await fetch(
-      `https://api.shrtco.de/v2/shorten?url=${url}`,
-      { method: 'POST' }
-    );
+    const response = await fetch(API_SHORTEN_URL + url, { method: 'POST' });
     return await response.json();
   }
 );
@@ -14,7 +12,7 @@ export const createShortLink = createAsyncThunk(
 const linkSlice = createSlice({
   name: 'links',
   initialState: {
-    links: [],
+    linkCards: [],
     loading: 'idle',
   },
   // reducers: {
@@ -33,7 +31,11 @@ const linkSlice = createSlice({
       const { ok, result } = action.payload;
 
       if (ok) {
-        state.links.push(result.full_short_link2);
+        state.linkCards.push({
+          oldLink: result.original_link,
+          newLink: result.full_short_link,
+          id: Date.now(),
+        });
         state.loading = 'idle';
       } else {
         state.loading = 'error';
