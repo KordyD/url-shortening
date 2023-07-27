@@ -33,7 +33,7 @@ const linkSlice = createSlice({
       const { ok, result } = action.payload;
 
       if (ok) {
-        state.links.push(result.short_link2);
+        state.links.push(result.full_short_link2);
         state.loading = 'idle';
       } else {
         state.loading = 'error';
