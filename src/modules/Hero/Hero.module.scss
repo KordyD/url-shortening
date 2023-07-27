@@ -1,0 +1,35 @@
+@use '../../lib';
+
+.wrapper {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+}
+
+.textWrapper {
+  width: 50%;
+  flex-shrink: 0;
+}
+
+.header {
+  font-weight: lib.$weight-bold;
+  font-size: 3.5rem;
+}
+
+.text {
+  color: lib.$grayish-violet;
+  margin-bottom: 20px;
+}
+
+.imageWrapper {
+  width: 100%;
+  position: relative;
+}
+
+.image {
+  position: relative;
+  width: 130%;
+  height: auto;
+  top: -25px;
+  right: -40px;
+}

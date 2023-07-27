@@ -1,24 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './InputForm.module.scss';
-import Input from '../../UI/Input/Input';
-import Button from '../../UI/Button/Button';
 const InputForm = ({ handleSubmit, handleChange }) => {
   return (
     <form className={styles.inputForm}>
-      <Input
+      <input
+        //       .input {
+        //   padding: 10px 20px;
+        //   border-radius: 10px;
+        //   border: none;
+        //   font-family: inherit;
+        // }
+
         onChange={(e) => handleChange(e.target.value)}
         type='url'
         placeholder='Shorten a link here...'
       />
-      <Button
+      <button
         onClick={(e) => {
           e.preventDefault();
           handleSubmit();
         }}
-        type='shorten'
       >
-        Shorten It !
-      </Button>
+        Shorten It!
+      </button>
     </form>
   );
 };

@@ -1,0 +1,93 @@
+@use 'lib';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+:root {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  font-weight: lib.$weight-light;
+  font-size: lib.$body-font-size;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+}
+
+button,
+input {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  // padding: 0 1.5rem;
+  margin: 0 auto;
+}
+
+.button {
+  color: white;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 30px;
+
+  &.basic {
+    background-color: lib.$cyan;
+    &:hover {
+      background-color: lighten(lib.$cyan, $amount: 30);
+    }
+
+    &:active {
+      background-color: lib.$dark-violet;
+    }
+  }
+
+  &.transparent {
+    color: lib.$grayish-violet;
+    background-color: transparent;
+    &:hover {
+      color: lib.$dark-violet;
+    }
+
+    &:active {
+      color: lib.$very-dark-violet;
+    }
+  }
+
+  &.square {
+    border-radius: 10px;
+  }
+}
+
+.link {
+  text-decoration: none;
+
+  &.header__link {
+    color: lib.$grayish-violet;
+    &:hover {
+      color: lib.$dark-violet;
+    }
+    &:active {
+      color: lib.$very-dark-violet;
+    }
+  }
+}
+
+// .oldLink {
+//   color: hsl(260, 8%, 14%);
+// }
+// .newLink {
+//   color: hsl(180, 66%, 49%);
+// }
+
+.shortenedLinks {
+  background-color: hsl(0, 0%, 75%);
+  margin-top: 150px;
+  position: relative;
+}

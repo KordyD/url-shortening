@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import InputForm from '../../components/InputForm/InputForm';
 import styles from './Shortening.module.scss';
 import LinkCard from '../../components/LinkCard/LinkCard';
@@ -46,7 +46,7 @@ const Shortening = () => {
         {/* {error && <p className={styles.error}>{error}</p>} */}
       </div>
       {links.map((card) => (
-        <LinkCard oldLink='' newLink={card}  />
+        <LinkCard oldLink='' newLink={card} />
       ))}
     </div>
   );

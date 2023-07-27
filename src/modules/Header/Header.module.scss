@@ -9,12 +9,11 @@
   gap: 25px;
   align-items: center;
 
-  & a {
+  a {
     display: flex;
-    align-items: center;
   }
 
-  & ul {
+  ul {
     list-style: none;
     display: flex;
     gap: 20px;

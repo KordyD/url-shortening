@@ -1,29 +1,17 @@
-import './App.css';
-import Button from './UI/Button/Button';
+import './App.scss';
 import Header from './modules/Header/Header';
-import InputForm from './components/InputForm/InputForm';
-import Welcome from './modules/Welcome/Welcome';
-import Container from './components/utils/Container/Container';
+import Hero from './modules/Hero/Hero';
 import Shortening from './modules/Shortening/Shortening';
 
 function App() {
   return (
     <>
-      <Container>
-        <Header />
-      </Container>
+      <Header />
 
-      <div className='welcome'>
-        <Container>
-          <Welcome />
-        </Container>
-        <img src='/images/illustration-working.svg' alt='Working' width={650} />
-      </div>
+      <Hero />
 
       <div className='shortenedLinks'>
-        <Container style={{ position: 'relative', top: '-59px' }}>
-          <Shortening />
-        </Container>
+        <Shortening />
       </div>
 
       <div>
@@ -61,7 +49,7 @@ function App() {
 
       <div>
         <h1>Boost your links today</h1>
-        <Button>Get Started</Button>
+        <button>Get Started</button>
       </div>
 
       <footer>
