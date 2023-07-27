@@ -10,7 +10,7 @@ const LinkCard = ({ oldLink, newLink }) => {
         {oldLink}
       </Link>
       <div>
-        <Link type='newLink' href={newLink}>
+        <Link type='newLink' href={'https:/' + newLink}>
           {newLink}
         </Link>
         <Button type='shorten'>Copy</Button>
