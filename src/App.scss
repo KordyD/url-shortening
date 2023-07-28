@@ -102,7 +102,8 @@ input {
     }
   }
 
-  &.linkCard__oldLink {
+  &.linkCard__oldLink,
+  &.footer__link {
     color: lib.$dark-violet;
     &:hover {
       color: lib.$cyan;
@@ -110,6 +111,20 @@ input {
 
     &:active {
       color: lighten(lib.$cyan, $amount: 30);
+    }
+  }
+  &.footer__link {
+    color: lib.$grayish-violet;
+  }
+
+  &.footer__icon__link {
+    background-color: white;
+    &:hover {
+      background-color: lib.$cyan;
+    }
+
+    &:active {
+      background-color: lighten(lib.$cyan, $amount: 30);
     }
   }
 }

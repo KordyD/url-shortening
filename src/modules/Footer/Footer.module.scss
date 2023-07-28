@@ -1,0 +1,65 @@
+@use '/src/lib';
+
+.footer {
+  font-size: 0.7rem;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  display: grid;
+  grid-template-columns: 0.6fr 1fr auto;
+  column-gap: 1.5rem;
+  h3 {
+    color: white;
+    font-weight: lib.$weight-bold;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.linksWrapper {
+  display: flex;
+  gap: 70px;
+}
+
+.footerBackground {
+  background-color: lib.$very-dark-violet;
+}
+
+.iconWrapper {
+  display: flex;
+  gap: 15px;
+}
+
+.facebook {
+  display: block;
+  width: 24px;
+  height: 24px;
+  mask: url('/src/assets/icon-facebook.svg');
+  mask-size: 100%;
+}
+.twitter {
+  display: block;
+  width: 24px;
+  height: 20px;
+  mask: url('/src/assets/icon-twitter.svg');
+  mask-size: 100%;
+}
+.pinterest {
+  display: block;
+  width: 24px;
+  height: 24px;
+  mask: url('/src/assets/icon-pinterest.svg');
+  mask-size: 100%;
+}
+.instagram {
+  display: block;
+  width: 24px;
+  height: 24px;
+  mask: url('/src/assets/icon-instagram.svg');
+  mask-size: 100%;
+}
