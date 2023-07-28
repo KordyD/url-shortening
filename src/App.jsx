@@ -1,5 +1,6 @@
 import './App.scss';
 import Advertising from './modules/Advertising/Advertising';
+import Boost from './modules/Boost/Boost';
 import Header from './modules/Header/Header';
 import Hero from './modules/Hero/Hero';
 import Shortening from './modules/Shortening/Shortening';
@@ -15,11 +16,7 @@ function App() {
 
       <Advertising />
 
-      <div>
-        <h1>Boost your links today</h1>
-        <button>Get Started</button>
-      </div>
-
+      <Boost />
       <footer>
         <div>
           <h3>Features</h3>

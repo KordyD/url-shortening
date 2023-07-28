@@ -1,0 +1,18 @@
+@use '/src/lib';
+
+.boostBackground {
+  background-color: lib.$very-dark-blue;
+  background-image: url(/src/assets/bg-boost-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 100%;
+}
+
+.boost {
+  color: white;
+  h1 {
+    font-weight: lib.$weight-bold;
+    margin-bottom: 25px;
+  }
+  padding: 55px 0;
+  text-align: center;
+}
