@@ -10,8 +10,6 @@ const Shortening = () => {
 
   const dispatch = useDispatch();
 
-  const [oldLink, setOldLink] = useState('');
-
   // const [error, setError] = useState('');
   // const reg =
   //   /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/;
@@ -28,21 +26,20 @@ const Shortening = () => {
   //   setError(err.message);
   // }
 
-  const createNewLink = () => {
+  const [copiedLink, setCopiedLink] = useState('');
+
+  const createNewLink = (oldLink) => {
     dispatch(createShortLink(oldLink));
   };
 
-  const handleChange = (value) => {
-    setOldLink(value);
+  const copyLink = (link) => {
+    navigator.clipboard.writeText(link).then(() => setCopiedLink(link));
   };
 
   return (
     <div>
       <div className={styles.inputFormBackground}>
-        <InputForm
-          handleSubmit={() => createNewLink()}
-          handleChange={handleChange}
-        />
+        <InputForm handleSubmit={createNewLink} />
       </div>
       <div className={styles.linkCardsBackground}>
         <div className={`${styles.linkCardsWrapper} container`}>
@@ -50,6 +47,8 @@ const Shortening = () => {
             <LinkCard
               oldLink={card.oldLink}
               newLink={card.newLink}
+              handleClick={copyLink}
+              copied={copiedLink}
               key={card.id}
             />
           ))}

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './LinkCard.module.scss';
 
-const LinkCard = ({ oldLink, newLink }) => {
+const LinkCard = ({ oldLink, newLink, handleClick, copied }) => {
   return (
     <div className={styles.linkCard}>
       <a
@@ -21,7 +21,13 @@ const LinkCard = ({ oldLink, newLink }) => {
         >
           {newLink}
         </a>
-        <button className='button basic square'>Copy</button>
+        <button
+          onClick={() => handleClick(newLink)}
+          className='button basic square'
+          disabled={newLink === copied ? true : false}
+        >
+          {newLink === copied ? 'Copied!' : 'Copy'}
+        </button>
       </div>
     </div>
   );

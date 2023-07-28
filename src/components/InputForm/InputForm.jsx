@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './InputForm.module.scss';
-const InputForm = ({ handleSubmit, handleChange }) => {
+const InputForm = ({ handleSubmit }) => {
+  const [inputValue, setInputValue] = useState('');
   return (
     <form className={`${styles.inputForm} container`}>
       <input
+        value={inputValue}
         className={styles.input}
-        onChange={(e) => handleChange(e.target.value)}
+        onChange={(e) => setInputValue(e.target.value)}
         type='url'
         placeholder='Shorten a link here...'
       />
@@ -13,7 +15,8 @@ const InputForm = ({ handleSubmit, handleChange }) => {
         className='button basic square'
         onClick={(e) => {
           e.preventDefault();
-          handleSubmit();
+          handleSubmit(inputValue);
+          setInputValue('');
         }}
       >
         Shorten It!

@@ -63,6 +63,17 @@ input {
   &.square {
     border-radius: 10px;
   }
+
+  &:disabled {
+    background-color: lib.$dark-violet;
+    &:hover {
+      background-color: lib.$dark-violet;
+    }
+
+    &:active {
+      background-color: lib.$dark-violet;
+    }
+  }
 }
 
 .link {
