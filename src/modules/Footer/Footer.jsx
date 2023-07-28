@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './Footer.module.scss';
 const Footer = () => {
   return (
-    <div className={styles.footerBackground}>
-      <footer className={`${styles.footer} container`}>
+    <footer className={styles.footerBackground}>
+      <div className={`${styles.footer} container`}>
         <a href='' role='img' aria-label='shortly'>
           <img alt='Shortly logo' src='/src/assets/logo-white.svg' />
         </a>
@@ -102,8 +102,8 @@ const Footer = () => {
             aria-label='instagram'
           ></a>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   );
 };
 

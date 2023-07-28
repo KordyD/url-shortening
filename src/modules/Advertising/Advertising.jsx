@@ -22,7 +22,7 @@ const Advertising = () => {
   ];
 
   return (
-    <div className={styles.advBackground}>
+    <section className={styles.advBackground}>
       <div className='container'>
         <div className={styles.head}>
           <h1>Advanced Statistics</h1>
@@ -45,7 +45,7 @@ const Advertising = () => {
           <div className={styles.stripe}></div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

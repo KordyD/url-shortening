@@ -3,7 +3,7 @@ import styles from './Hero.module.scss';
 
 const Hero = () => {
   return (
-    <div className={`${styles.wrapper} container`}>
+    <section className={`${styles.wrapper} container`}>
       <div className={styles.textWrapper}>
         <h1 className={styles.header}>More than just shorter links</h1>
         <p className={styles.text}>
@@ -21,7 +21,7 @@ const Hero = () => {
           height={482}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

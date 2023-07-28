@@ -10,14 +10,15 @@ function App() {
   return (
     <>
       <Header />
+      <main>
+        <Hero />
 
-      <Hero />
+        <Shortening />
 
-      <Shortening />
+        <Advertising />
 
-      <Advertising />
-
-      <Boost />
+        <Boost />
+      </main>
 
       <Footer />
       {/* <div className='attribution'>

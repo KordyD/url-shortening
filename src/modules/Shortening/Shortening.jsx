@@ -36,7 +36,7 @@ const Shortening = () => {
   };
 
   return (
-    <div>
+    <section>
       <div className={styles.inputFormBackground}>
         <InputForm handleSubmit={createNewLink} error={error} />
       </div>
@@ -53,7 +53,7 @@ const Shortening = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
