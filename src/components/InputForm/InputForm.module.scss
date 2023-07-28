@@ -6,13 +6,27 @@
   border: none;
   padding: 15px 30px;
   font-size: 0.8rem;
+
+  &.errorInput {
+    border: 3px solid lib.$red;
+  }
 }
 
 .inputForm {
-  display: flex;
-  gap: 25px;
+  & > div {
+    display: flex;
+    gap: 25px;
+  }
   background-color: lib.$very-dark-blue;
   background-image: url('/src/assets/bg-shorten-desktop.svg');
   padding: 35px;
   border-radius: 10px;
+}
+
+.error {
+  color: lib.$red;
+  font-style: italic;
+  font-size: 0.7rem;
+  margin-top: 5px;
+  margin-bottom: -14px;
 }

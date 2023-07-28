@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { API_SHORTEN_URL } from '../helpers/API';
 
 export const createShortLink = createAsyncThunk(
-  'links/createShortLink',
+  'linkCards/createShortLink',
   async function (url) {
     const response = await fetch(API_SHORTEN_URL + url, { method: 'POST' });
     return await response.json();
@@ -10,16 +10,17 @@ export const createShortLink = createAsyncThunk(
 );
 
 const linkSlice = createSlice({
-  name: 'links',
+  name: 'linkCards',
   initialState: {
     linkCards: [],
     loading: 'idle',
+    error: '',
   },
-  // reducers: {
-  //   createLink(state, action) {
-  //     state.linkCards.push(action.payload.links);
-  //   },
-  // },
+  reducers: {
+    setError(state, action) {
+      state.error = action.payload.error;
+    },
+  },
   extraReducers: {
     [createShortLink.rejected]: (state) => {
       state.loading = 'rejected';
@@ -28,7 +29,7 @@ const linkSlice = createSlice({
       state.loading = 'loading';
     },
     [createShortLink.fulfilled]: (state, action) => {
-      const { ok, result } = action.payload;
+      const { ok, result, error } = action.payload;
 
       if (ok) {
         state.linkCards.push({
@@ -39,11 +40,12 @@ const linkSlice = createSlice({
         state.loading = 'idle';
       } else {
         state.loading = 'error';
+        state.error = error;
       }
     },
   },
 });
 
-// export const { createLink } = linkSlice.actions;
+export const { setError } = linkSlice.actions;
 
 export default linkSlice.reducer;
