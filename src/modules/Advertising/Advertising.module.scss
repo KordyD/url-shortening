@@ -1,0 +1,42 @@
+@use '/src/lib';
+
+.advBackground {
+  background-color: lib.$light-gray;
+  padding: 50px 0 150px;
+
+  ul {
+    list-style: none;
+  }
+}
+
+.head {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto 100px;
+
+  h1 {
+    font-weight: lib.$weight-bold;
+  }
+
+  p {
+    color: lib.$grayish-violet;
+  }
+}
+
+.cardsWrapper {
+  margin-top: 150px;
+  display: flex;
+  gap: 35px;
+}
+
+.stripe {
+  background-color: lib.$cyan;
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+}
+
+.cardsStripeWrapper {
+  position: relative;
+}

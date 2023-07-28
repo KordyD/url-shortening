@@ -36,6 +36,7 @@ input {
   border: none;
   cursor: pointer;
   padding: 10px 30px;
+  transition: all 0.3s;
 
   &.basic {
     background-color: lib.$cyan;
@@ -78,6 +79,7 @@ input {
 
 .link {
   text-decoration: none;
+  transition: all 0.3s;
 
   &.header__link {
     color: lib.$grayish-violet;
