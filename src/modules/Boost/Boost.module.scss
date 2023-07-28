@@ -2,7 +2,7 @@
 
 .boostBackground {
   background-color: lib.$very-dark-blue;
-  background-image: url(/src/assets/bg-boost-desktop.svg);
+  background-image: url('/src/assets/bg-boost-desktop.svg');
   background-repeat: no-repeat;
   background-position: 100%;
 }
@@ -15,4 +15,12 @@
   }
   padding: 55px 0;
   text-align: center;
+}
+
+@media (max-width: 375px) {
+  .boostBackground {
+    background-image: url('/src/assets/bg-boost-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: 100%;
+  }
 }

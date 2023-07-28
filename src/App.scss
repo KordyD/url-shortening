@@ -132,3 +132,9 @@ input {
     }
   }
 }
+
+@media (max-width: 732px) {
+  :root {
+    font-size: calc(lib.$body-font-size * 0.8);
+  }
+}

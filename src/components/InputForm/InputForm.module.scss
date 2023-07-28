@@ -30,3 +30,19 @@
   margin-top: 5px;
   margin-bottom: -14px;
 }
+
+@media (max-width: 650px) {
+  .inputForm {
+    div {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .inputForm {
+    background-image: url('/src/assets/bg-shorten-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: 100% -50%;
+  }
+}

@@ -14,11 +14,13 @@
 .header {
   font-weight: lib.$weight-bold;
   font-size: 3.5rem;
+  color: lib.$very-dark-blue;
 }
 
 .text {
   color: lib.$grayish-violet;
   margin-bottom: 20px;
+  font-size: 1.2rem;
 }
 
 .imageWrapper {
@@ -32,4 +34,13 @@
   height: auto;
   top: -25px;
   right: -40px;
+}
+
+@media (max-width: 900px) {
+  .header {
+    font-size: 2.5rem;
+  }
+  .text {
+    font-size: 1rem;
+  }
 }
