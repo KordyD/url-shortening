@@ -1,11 +1,8 @@
+@use '/src/lib';
+
 .header {
-  display: flex;
-  justify-content: space-between;
   padding-top: 35px;
   padding-bottom: 35px;
-}
-
-.navigationWrapper {
   display: flex;
   gap: 25px;
   align-items: center;
@@ -19,9 +16,90 @@
     display: flex;
     gap: 20px;
   }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  .navigationBurger {
+    display: none;
+  }
+
+  .burgerButton {
+    display: none;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    div {
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      div {
+        background-color: lib.$light-gray;
+      }
+    }
+    &:active {
+      div {
+        background-color: darken(lib.$grayish-violet, 20);
+      }
+    }
+
+    div {
+      width: 25px;
+      height: 3px;
+      background-color: lib.$grayish-violet;
+    }
+  }
 }
 
 .buttons {
   display: flex;
   gap: 20px;
+}
+
+@media (max-width: 650px) {
+  .header {
+    justify-content: space-between;
+    .navigation {
+      display: none;
+    }
+    .burgerButton {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .navigationBurger {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      background-color: lib.$dark-violet;
+      border-radius: 10px;
+      padding: 35px 15px;
+      width: 80%;
+      z-index: 2;
+      left: 0;
+      top: 0;
+      transform: translate(12.5%, 35%);
+      ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      .buttons {
+        flex-direction: column;
+      }
+      &.active {
+        opacity: 1;
+        transition: all 0.5s;
+      }
+      &.inActive {
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.5s;
+      }
+    }
+  }
 }

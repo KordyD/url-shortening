@@ -79,6 +79,17 @@ input {
       background-color: lib.$dark-violet;
     }
   }
+
+  &.burger__button {
+    color: white;
+    &:hover {
+      color: lib.$cyan;
+    }
+
+    &:active {
+      color: lighten(lib.$cyan, $amount: 30);
+    }
+  }
 }
 
 .link {
@@ -129,6 +140,17 @@ input {
 
     &:active {
       background-color: lighten(lib.$cyan, $amount: 30);
+    }
+  }
+
+  &.burger__link {
+    color: white;
+    &:hover {
+      color: lib.$cyan;
+    }
+
+    &:active {
+      color: lighten(lib.$cyan, $amount: 30);
     }
   }
 }

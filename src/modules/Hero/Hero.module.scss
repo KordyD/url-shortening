@@ -44,3 +44,16 @@
     font-size: 1rem;
   }
 }
+@media (max-width: 650px) {
+  .wrapper {
+    flex-direction: column-reverse;
+    margin-top: 20px;
+  }
+  .textWrapper {
+    width: 100%;
+    text-align: center;
+  }
+  .image {
+    right: -20px;
+  }
+}
