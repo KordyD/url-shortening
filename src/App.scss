@@ -117,6 +117,10 @@ input {
     }
   }
 
+  &.linkCard__oldLink {
+    overflow: hidden;
+  }
+
   &.linkCard__oldLink,
   &.footer__link {
     color: lib.$dark-violet;
