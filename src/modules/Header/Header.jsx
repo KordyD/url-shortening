@@ -6,24 +6,24 @@ const Header = () => {
 
   return (
     <header className={`${styles.header} container`}>
-      <a href='' role='img' aria-label='shortly'>
+      <a href='#' role='img' aria-label='shortly'>
         <img alt='Shortly logo' src='/src/assets/logo.svg' />
       </a>
       <div className={styles.navigation}>
         <nav>
           <ul>
             <li>
-              <a className='link header__link' href=''>
+              <a className='link header__link' href='#'>
                 Features
               </a>
             </li>
             <li>
-              <a className='link header__link' href=''>
+              <a className='link header__link' href='#'>
                 Pricing
               </a>
             </li>
             <li>
-              <a className='link header__link' href=''>
+              <a className='link header__link' href='#'>
                 Resources
               </a>
             </li>
@@ -53,17 +53,17 @@ const Header = () => {
         <nav>
           <ul>
             <li>
-              <a className='link burger__link ' href=''>
+              <a className='link burger__link ' href='#'>
                 Features
               </a>
             </li>
             <li>
-              <a className='link burger__link' href=''>
+              <a className='link burger__link' href='#'>
                 Pricing
               </a>
             </li>
             <li>
-              <a className='link burger__link' href=''>
+              <a className='link burger__link' href='#'>
                 Resources
               </a>
             </li>
