@@ -1,3 +1,3 @@
 # URL shortening app
 
-Based on https://shrtco.de/
+Based on <https://shrtco.de/>
