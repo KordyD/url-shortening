@@ -1,23 +1,26 @@
 import React from 'react';
 import styles from './Advertising.module.scss';
 import AdvCard from '../../components/AdvCard/AdvCard';
+import brandRecognition from '/src/assets/icon-brand-recognition.svg';
+import detailedRecords from '/src/assets/icon-detailed-records.svg';
+import fullyCustomizable from '/src/assets/icon-fully-customizable.svg';
 
 const Advertising = () => {
   const advCards = [
     {
       header: 'Brand Recognition',
       text: 'Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.',
-      img: '/src/assets/icon-brand-recognition.svg',
+      img: brandRecognition,
     },
     {
       header: 'Detailed Records',
       text: 'Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.',
-      img: '/src/assets/icon-detailed-records.svg',
+      img: detailedRecords,
     },
     {
       header: 'Fully Customizable',
       text: 'Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.',
-      img: '/src/assets/icon-fully-customizable.svg',
+      img: fullyCustomizable,
     },
   ];
 

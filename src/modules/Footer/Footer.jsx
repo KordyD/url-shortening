@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './Footer.module.scss';
+import shortlyLogoWhite from '/src/assets/logo-white.svg';
 const Footer = () => {
   return (
     <footer className={styles.footerBackground}>
       <div className={`${styles.footer} container`}>
         <a href='#' role='img' aria-label='shortly'>
-          <img alt='Shortly logo' src='/src/assets/logo-white.svg' />
+          <img alt='Shortly logo' src={shortlyLogoWhite} />
         </a>
 
         <div className={styles.linksWrapper}>

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Hero.module.scss';
+import illustration from '/src/assets/illustration-working.svg';
 
 const Hero = () => {
   return (
@@ -15,7 +16,7 @@ const Hero = () => {
       <div className={styles.imageWrapper}>
         <img
           className={styles.image}
-          src='/src/assets/illustration-working.svg'
+          src={illustration}
           alt='Working'
           width={733}
           height={482}

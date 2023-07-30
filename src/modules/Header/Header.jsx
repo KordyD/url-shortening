@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Header.module.scss';
+import shortlyLogo from '/src/assets/logo.svg';
 
 const Header = () => {
   const [state, setState] = useState('');
@@ -7,7 +8,7 @@ const Header = () => {
   return (
     <header className={`${styles.header} container`}>
       <a href='#' role='img' aria-label='shortly'>
-        <img alt='Shortly logo' src='/src/assets/logo.svg' />
+        <img alt='Shortly logo' src={shortlyLogo} />
       </a>
       <div className={styles.navigation}>
         <nav>
